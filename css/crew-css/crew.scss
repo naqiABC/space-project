@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    text-decoration: none;
+    list-style: none;
 }
 
 :root {
@@ -10,25 +11,27 @@
     --Secondary-color: white;
     --font-inter: "Barlow Condensed",
         sans-serif;
-
+    --h-grey: grey;
     --glass-filter: rgba(255, 255, 255, 0.19);
 
 }
 
+
+
 .main-container {
-    background-image: url(../images/background-destination-desktop.jpg);
-    width: 100%;
-    height: 100vh;
+    background-image: url(/images/crew/background-crew-desktop.jpg);
+    // width: 100%;
+    // height: 100vh;
     background-size: cover;
 
 
     .content-area {
         display: flex;
-        justify-content: space-between;
-        // gap: 30%;
-        align-items: center;
+        justify-content: center;
         gap: 38%;
-        padding: 20px 0;
+        padding: 12px;
+        align-items: center;
+
 
 
 
@@ -38,21 +41,24 @@
 
         }
 
+
+
+
         nav {
-            display: none;
             display: flex;
-            gap: 4%;
-            background-color: #1e222c;
+            gap: 10%;
+            // background-color: #1e222c;
             padding: 38px 0px;
             justify-content: center;
             width: 100%;
 
 
             background: var(--glass-filter);
-            padding: 30px 0;
             backdrop-filter: blur(0.7px);
             position: relative;
-            gap: 10%;
+
+
+
 
 
             a {
@@ -64,6 +70,7 @@
                 gap: 5%;
 
 
+
                 &:hover {
                     border-bottom: 3px solid var(--Secondary-color);
                     // opacity: 0.5;
@@ -71,7 +78,9 @@
                 }
 
 
+
                 span {
+                    // display: none;
                     font-weight: bold;
                     color: var(--Secondary-color);
 
@@ -85,19 +94,16 @@
 
     hr {
         opacity: 0.3;
-        // padding: 0 180px;
         width: 36%;
         background-color: var(--glass-filter);
-        // backdrop-filter: blur(5.5px);
         position: absolute;
         top: 55px;
         left: 12%;
 
 
-
     }
 
-    .inner-content {
+    .content {
         display: flex;
         align-items: center;
         gap: 2%;
@@ -106,7 +112,7 @@
         padding-left: 100px;
 
         h1 {
-            color: grey;
+            color: var(--h-grey);
             font-family: var(--font-inter);
             letter-spacing: 5px;
         }
@@ -115,82 +121,41 @@
             letter-spacing: 5px;
             color: var(--Secondary-color);
             font-family: var(--font-inter);
+            font-weight: 200;
         }
     }
 
-    .last-area {
+    .section-area {
         display: flex;
         justify-content: center;
-        // align-items: center;
-        gap: 10%;
-        margin-top: 20px;
+        gap: 5%;
+        margin-top: 25px;
 
-        nav {
-            display: flex;
-            gap: 5%;
-
-            a {
-                color: var(--Secondary-color);
-                letter-spacing: 5px;
-                font-family: var(--font-inter);
-                font-size: 12px;
-            }
-        }
-
-        .heading-area {
-            margin-top: 20px;
+        .wrap-area {
+            margin-top: 50px;
 
             h1 {
-                font-size: 80px;
+                color: var(--h-grey);
+                font-weight: 200;
+                font-family: var(--font-inter);
+            }
+
+            h2 {
                 color: var(--Secondary-color);
-                letter-spacing: 10px;
+                padding-top: 10px;
+                font-weight: 200;
+                font-size: 50px;
+                letter-spacing: 4px;
             }
 
             p {
                 color: var(--Primary-color);
-                font-family: var(--font-inter);
                 width: 35vw;
-                line-height: 2;
-                letter-spacing: 2px;
-                margin-top: 10px;
-                font-weight: 400;
-            }
-
-
-        }
-
-        .ln-area {
-            margin-top: 50px;
-
-            hr {
-                opacity: 0.3;
-            }
-
-        }
-
-        .section-area {
-            display: flex;
-            gap: 20%;
-            margin-top: 20px;
-
-            h2 {
-                color: var(--Secondary-color);
                 font-family: var(--font-inter);
-                font-size: 15px;
-                font-weight: 300;
-                color: var(--Primary-color);
-                padding-bottom: 15px;
-            }
-
-            span {
-                color: var(--Secondary-color);
-                font-family: var(--Secondary-color);
-                font-size: 35px;
-                text-wrap: nowrap;
+                letter-spacing: 2px;
+                line-height: 2;
+                padding-top: 20px;
             }
         }
-
     }
-
-
 }
