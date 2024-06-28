@@ -1,4 +1,4 @@
-function myFunction() {
+function Toggle() {
   var nav = document.getElementById("myLinks");
   if (nav.style.display === "block") {
     nav.style.display = "none";

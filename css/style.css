@@ -18,6 +18,7 @@
 
 .main-container {
   background-image: url(../images/bg-images/background-home-mobile.jpg);
+  height: 100vh;
   background-size: cover;
 }
 @media (min-width: 48em) {
@@ -66,7 +67,6 @@
 }
 .main-container .mobile-area .nav-area {
   display: flex;
-  padding: 20px;
   gap: 34%;
   justify-content: space-between;
 }
