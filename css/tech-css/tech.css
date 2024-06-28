@@ -18,7 +18,7 @@
   background-image: url(/images/technology/background-technology-desktop.jpg);
   background-size: cover;
 }
-.main-container .mobile-area {
+.main-container .content-area {
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -27,72 +27,83 @@
   gap: 38%;
   padding: 20px 0;
 }
-.main-container .mobile-area .logo-img {
+.main-container .content-area .logo-img {
   margin-left: 4%;
 }
-.main-container .mobile-area nav {
+.main-container .content-area nav {
   display: flex;
-  gap: 4%;
+  gap: 10%;
   background-color: #1e222c;
   padding: 38px 0px;
   justify-content: center;
   width: 100%;
 }
-.main-container .mobile-area nav a {
+.main-container .content-area nav a {
   color: var(--Secondary-color);
   font-size: 12px;
   font-family: var(--font-inter);
   letter-spacing: 3px;
   display: flex;
   gap: 5%;
+  font-weight: bold;
 }
-.main-container .mobile-area nav a:hover {
+.main-container .content-area nav a:hover {
   border-bottom: 3px solid var(--Secondary-color);
+}
+.main-container .content-area nav a span {
+  display: none;
+}
+@media (min-width: 64em) {
+  .main-container .content-area nav a span {
+    display: block;
+    font-weight: bold;
+    color: var(--Secondary-color);
+  }
 }
 .main-container hr {
   opacity: 0.3;
   width: 36%;
   background-color: var(--glass-filter);
   position: absolute;
-  top: 55px;
+  top: 63px;
   left: 12%;
 }
-.main-container .content {
+.main-container .heading-area {
   display: flex;
   align-items: center;
   gap: 2%;
   margin-top: 30px;
   padding-left: 100px;
 }
-.main-container .content h1 {
+.main-container .heading-area h1 {
   color: grey;
   font-family: var(--font-inter);
   letter-spacing: 5px;
 }
-.main-container .content h2 {
+.main-container .heading-area h2 {
   letter-spacing: 5px;
   color: var(--Secondary-color);
   font-family: var(--font-inter);
   font-weight: 200;
 }
-.main-container .section {
+.main-container .section-area {
   display: flex;
   justify-content: center;
   gap: 10%;
   margin-top: 40px;
 }
-.main-container .section .area-one {
+.main-container .section-area .area-one {
   display: flex;
   gap: 10%;
   width: 100%;
   margin-top: 80px;
   margin-left: 80px;
 }
-.main-container .section .area-one .num-area {
+.main-container .section-area .area-one .num-area {
   display: flex;
   flex-direction: column;
 }
-.main-container .section .area-one .num-area span {
+.main-container .section-area .area-one .num-area span {
   color: var(--Secondary-color);
   border: solid 2px grey;
   padding: 15px 30px;
@@ -100,28 +111,28 @@
   margin: 10px;
   font-size: 40px;
 }
-.main-container .section .area-one .num-area span:hover {
+.main-container .section-area .area-one .num-area span:hover {
   background-color: var(--Secondary-color);
   color: black;
 }
-.main-container .section .area-one .text-area {
+.main-container .section-area .area-one .text-area {
   margin-top: 40px;
 }
-.main-container .section .area-one .text-area h1 {
+.main-container .section-area .area-one .text-area h1 {
   color: var(--Primary-color);
   font-size: 13px;
   text-wrap: nowrap;
   font-weight: 200;
   font-family: var(--font-inter);
 }
-.main-container .section .area-one .text-area h2 {
+.main-container .section-area .area-one .text-area h2 {
   color: var(--Secondary-color);
   text-wrap: nowrap;
   font-size: 40px;
   padding-top: 20px;
   font-weight: 500;
 }
-.main-container .section .area-one .text-area p {
+.main-container .section-area .area-one .text-area p {
   color: var(--Primary-color);
   width: 30vw;
   line-height: 1.5;

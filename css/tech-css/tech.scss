@@ -47,12 +47,11 @@ $breakpoints-up: (
 
 .main-container {
     background-image: url(/images/technology/background-technology-desktop.jpg);
-    // width: 100%;
-    // height: 100vh;
+
     background-size: cover;
 
 
-    .mobile-area {
+    .content-area {
         padding: 20px;
         display: flex;
         justify-content: space-between;
@@ -62,22 +61,11 @@ $breakpoints-up: (
         gap: 38%;
         // padding: 0px;
         padding: 20px 0;
-        // @include breakpoint(res768) {
-        //     justify-content: center;
-        //     gap: 38%;
-        //     padding: 0px;
-        // }
-
-        // @include breakpoint(res1024) {
-        //     padding: 20px 0;
-        // }
 
         .logo-img {
             margin-left: 4%;
 
-            // @include breakpoint(res768) {
-            //     margin-left: 4%;
-            // }
+
         }
 
 
@@ -87,27 +75,13 @@ $breakpoints-up: (
         nav {
             // display: none;
             display: flex;
-            gap: 4%;
+            gap: 10%;
             background-color: #1e222c;
             padding: 38px 0px;
             justify-content: center;
             width: 100%;
 
-            // @include breakpoint(res768) {
-            //     display: flex;
-            //     gap: 4%;
-            //     background-color: #1e222c;
-            //     padding: 38px 0px;
-            //     justify-content: center;
-            //     width: 100%;
-            // }
 
-
-
-
-            // @include breakpoint(res1440) {
-            //     gap: 10%;
-            // }
 
             a {
                 color: var(--Secondary-color);
@@ -117,11 +91,7 @@ $breakpoints-up: (
 
                 display: flex;
                 gap: 5%;
-
-                // @include breakpoint(res1024) {
-                //     display: flex;
-                //     gap: 5%;
-                // }
+                font-weight: bold;
 
                 &:hover {
                     border-bottom: 3px solid var(--Secondary-color);
@@ -129,6 +99,15 @@ $breakpoints-up: (
 
                 }
 
+                span {
+                    display: none;
+
+                    @include breakpoint(res1024) {
+                        display: block;
+                        font-weight: bold;
+                        color: var(--Secondary-color);
+                    }
+                }
 
 
             }
@@ -139,30 +118,19 @@ $breakpoints-up: (
     }
 
     hr {
-        // display: none;
         opacity: 0.3;
         width: 36%;
         background-color: var(--glass-filter);
-        // backdrop-filter: blur(5.5px);
         position: absolute;
-        top: 55px;
+        top: 63px;
         left: 12%;
 
-        // @include breakpoint(res1024) {
-        //     display: block;
-        //     // padding: 0 180px;
-        //     width: 36%;
-        //     background-color: var(--glass-filter);
-        //     // backdrop-filter: blur(5.5px);
-        //     position: absolute;
-        //     top: 55px;
-        //     left: 12%;
-        // }
+
 
     }
 
 
-    .content {
+    .heading-area {
         display: flex;
         align-items: center;
         gap: 2%;
@@ -184,7 +152,7 @@ $breakpoints-up: (
         }
     }
 
-    .section {
+    .section-area {
         display: flex;
         justify-content: center;
         gap: 10%;
