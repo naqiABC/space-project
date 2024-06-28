@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --Primary-color: #D0D6F9;
+  --Secondary-color: white;
+  --font-inter: "Barlow Condensed",
+      sans-serif;
+  --h-grey: grey;
+  --glass-filter: rgba(255, 255, 255, 0.19);
+}
+
+.main-container {
+  background-image: url(/images/crew/background-crew-desktop.jpg);
+  background-size: cover;
+}
+.main-container .content-area {
+  display: flex;
+  justify-content: center;
+  gap: 38%;
+  padding: 12px;
+  align-items: center;
+}
+.main-container .content-area .logo-img {
+  margin-left: 4%;
+}
+.main-container .content-area nav {
+  display: flex;
+  gap: 10%;
+  padding: 38px 0px;
+  justify-content: center;
+  width: 100%;
+  background: var(--glass-filter);
+  -webkit-backdrop-filter: blur(0.7px);
+          backdrop-filter: blur(0.7px);
+  position: relative;
+}
+.main-container .content-area nav a {
+  color: var(--Secondary-color);
+  font-size: 12px;
+  font-family: var(--font-inter);
+  letter-spacing: 3px;
+  display: flex;
+  gap: 5%;
+}
+.main-container .content-area nav a:hover {
+  border-bottom: 3px solid var(--Secondary-color);
+}
+.main-container .content-area nav a span {
+  font-weight: bold;
+  color: var(--Secondary-color);
+}
+.main-container hr {
+  opacity: 0.3;
+  width: 36%;
+  background-color: var(--glass-filter);
+  position: absolute;
+  top: 55px;
+  left: 12%;
+}
+.main-container .content {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  margin-top: 30px;
+  padding-left: 100px;
+}
+.main-container .content h1 {
+  color: var(--h-grey);
+  font-family: var(--font-inter);
+  letter-spacing: 5px;
+}
+.main-container .content h2 {
+  letter-spacing: 5px;
+  color: var(--Secondary-color);
+  font-family: var(--font-inter);
+  font-weight: 200;
+}
+.main-container .section-area {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin-top: 25px;
+}
+.main-container .section-area .wrap-area {
+  margin-top: 50px;
+}
+.main-container .section-area .wrap-area h1 {
+  color: var(--h-grey);
+  font-weight: 200;
+  font-family: var(--font-inter);
+}
+.main-container .section-area .wrap-area h2 {
+  color: var(--Secondary-color);
+  padding-top: 10px;
+  font-weight: 200;
+  font-size: 50px;
+  letter-spacing: 4px;
+}
+.main-container .section-area .wrap-area p {
+  color: var(--Primary-color);
+  width: 35vw;
+  font-family: var(--font-inter);
+  letter-spacing: 2px;
+  line-height: 2;
+  padding-top: 20px;
+}/*# sourceMappingURL=crew.css.map */

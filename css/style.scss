@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --Primary-color: #D0D6F9;
+    --Secondary-color: white;
+    --font-inter: "Barlow Condensed",
+        sans-serif;
+
+    --hover-color: aquamarine;
+
+    --nav-bg: #1e222c;
+    --glass-filter: rgba(255, 255, 255, 0.19);
+
+}
+
+// 375px:23.438em,
+// 400px:25em,
+// 768px:48em,
+// 1024px:64em,
+// 1200px:75em,
+// 1366px:85.375em,
+// 1440px:90em
+// 1920px:120em
+$breakpoints-up: (
+    'res375': '23.438em',
+    // iphone all plus version are cover here 
+    'res425': '26.5625em',
+    'res768': '48em',
+    'res800': '50em',
+    'res1024': '64em',
+    'res1280': '80em',
+    'res1366': '85.375em',
+    'res1440': '90em',
+    'res1920': '120em',
+    'res2k': '128em',
+    'res4k': '240em',
+);
+
+@mixin breakpoint($size) {
+    @media (min-width: map-get($breakpoints-up, $size)) {
+        @content;
+    }
+}
+
+.main-container {
+    background-image: url(../images/bg-images/background-home-mobile.jpg);
+    // width: 100%;
+    // height: 100vh;
+    background-size: cover;
+
+
+    @include breakpoint(res768) {
+        background-image: url(../images/bg-images/background-home-tablet.jpg);
+    }
+
+    @include breakpoint(res1024) {
+        background-image: url(../images/bg-images/background-home-desktop.jpg);
+        height: 100vh;
+    }
+
+
+    .mobile-area {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        // gap: 30%;
+        align-items: center;
+
+
+        @include breakpoint(res768) {
+            justify-content: center;
+            gap: 38%;
+            padding: 0px;
+        }
+
+        @include breakpoint(res1024) {
+            padding: 20px 0;
+        }
+
+        .logo-img {
+            @include breakpoint(res768) {
+                margin-left: 4%;
+            }
+        }
+
+        .menu-img {
+
+            @include breakpoint(res768) {
+                display: none;
+            }
+
+            @include breakpoint(res1024) {
+                display: none;
+            }
+        }
+
+        // toggle css
+
+        .nav-area {
+            display: flex;
+            padding: 20px;
+            gap: 34%;
+            // align-items: center;
+            justify-content: space-between;
+
+            @include breakpoint(res768) {
+                display: none;
+            }
+
+            #myLinks {
+                display: none;
+                position: absolute;
+
+                .nav-text {
+                    display: none;
+
+                    @include breakpoint(res768) {
+                        display: block;
+                    }
+
+                    // visibility: hidden;
+                    display: flex;
+                    color: var(--Secondary-color);
+                    background-color: var(--secondary-color);
+                    // padding: 20px;
+                    margin-top: 20px;
+                    font-family: var(--font-poppins);
+                    font-size: 15px;
+                    cursor: pointer;
+                    padding-top: 20px;
+
+                    // &:hover {
+                    //     background-color: var(--hover-color);
+                    //     color: var(--secondary-color);
+                    // }
+
+                }
+            }
+
+
+        }
+
+        // close css toggle
+
+        nav {
+            display: none;
+
+            @include breakpoint(res768) {
+                display: flex;
+                gap: 4%;
+                background-color: var(--nav-bg);
+                padding: 38px 0px;
+                justify-content: center;
+                width: 100%;
+            }
+
+
+            @include breakpoint(res1024) {
+                background: var(--glass-filter);
+                padding: 30px 0;
+                backdrop-filter: blur(0.7px);
+                position: relative;
+
+            }
+
+            @include breakpoint(res1440) {
+                gap: 10%;
+            }
+
+            a {
+                color: var(--Secondary-color);
+                font-size: 12px;
+                font-family: var(--font-inter);
+                letter-spacing: 3px;
+
+
+                @include breakpoint(res1024) {
+                    display: flex;
+                    gap: 5%;
+                }
+
+                &:hover {
+                    border-bottom: 3px solid var(--Secondary-color);
+                    // opacity: 0.5;
+
+                }
+
+                @include breakpoint(res1920) {
+                    font-size: 20px;
+                }
+
+                span {
+                    display: none;
+
+                    @include breakpoint(res1024) {
+                        display: block;
+                        font-weight: bold;
+                        color: white;
+                    }
+                }
+            }
+
+        }
+
+
+    }
+
+    hr {
+        display: none;
+        opacity: 0.3;
+
+        @include breakpoint(res1024) {
+            display: block;
+            // padding: 0 180px;
+            width: 36%;
+            background-color: var(--glass-filter);
+            // backdrop-filter: blur(5.5px);
+            position: absolute;
+            top: 55px;
+            left: 12%;
+        }
+
+    }
+
+    .content-area {
+        padding: 20px;
+
+        @include breakpoint(res768) {
+            padding: 80px 80px;
+        }
+
+        @include breakpoint(res1024) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20%;
+            margin-top: 5%;
+            padding: 82px 0;
+
+
+        }
+
+        h1 {
+            color: var(--Primary-color);
+            font-size: 11px;
+            text-align: center;
+            font-family: var(--font-inter);
+            letter-spacing: 3px;
+            font-weight: 400;
+            padding-bottom: 20px;
+
+            @include breakpoint(res1024) {
+                font-size: 15px;
+            }
+
+            @include breakpoint(res1920) {
+                font-size: 22px;
+                letter-spacing: 8px;
+            }
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--Secondary-color);
+            font-size: 80px;
+            text-decoration: Bellefair;
+            padding-bottom: 20px;
+            font-family: var(--font-inter);
+            font-weight: 300;
+
+            @include breakpoint(res768) {
+                font-size: 100px;
+            }
+
+            @include breakpoint(res1920) {
+                font-size: 170px;
+                font-family: var(--font-inter);
+            }
+        }
+
+        p {
+            color: var(--Primary-color);
+            text-align: center;
+            font-family: var(--font-inter);
+            line-height: 1.8;
+            align-items: center;
+
+            @include breakpoint(res768) {
+                width: 68vw;
+                padding-left: 80px;
+            }
+
+            @include breakpoint(res1024) {
+                width: 45vw;
+                text-align: justify;
+                padding-left: 80px;
+            }
+
+            @include breakpoint(res1440) {
+                width: 32vw;
+
+            }
+
+            @include breakpoint(res1920) {
+                width: 28vw;
+                font-size: 25px;
+            }
+        }
+
+        .image-area {
+            text-align: center;
+            padding-top: 50px;
+
+            @include breakpoint(res768) {
+                margin-top: 30%;
+            }
+
+            @include breakpoint(res1024) {
+                margin-top: 0%;
+            }
+
+            .moon {
+                width: 50%;
+
+                @include breakpoint(res768) {
+                    width: 40%;
+                }
+
+                @include breakpoint(res1024) {
+                    width: 70%;
+                }
+
+                @include breakpoint(res1920) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

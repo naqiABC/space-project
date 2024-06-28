@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --Primary-color: #D0D6F9;
+  --Secondary-color: white;
+  --font-inter: "Barlow Condensed",
+      sans-serif;
+  --hover-color: aquamarine;
+  --nav-bg: #1e222c;
+  --glass-filter: rgba(255, 255, 255, 0.19);
+}
+
+.main-container {
+  background-image: url(../images/bg-images/background-home-mobile.jpg);
+  background-size: cover;
+}
+@media (min-width: 48em) {
+  .main-container {
+    background-image: url(../images/bg-images/background-home-tablet.jpg);
+  }
+}
+@media (min-width: 64em) {
+  .main-container {
+    background-image: url(../images/bg-images/background-home-desktop.jpg);
+    height: 100vh;
+  }
+}
+.main-container .mobile-area {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 48em) {
+  .main-container .mobile-area {
+    justify-content: center;
+    gap: 38%;
+    padding: 0px;
+  }
+}
+@media (min-width: 64em) {
+  .main-container .mobile-area {
+    padding: 20px 0;
+  }
+}
+@media (min-width: 48em) {
+  .main-container .mobile-area .logo-img {
+    margin-left: 4%;
+  }
+}
+@media (min-width: 48em) {
+  .main-container .mobile-area .menu-img {
+    display: none;
+  }
+}
+@media (min-width: 64em) {
+  .main-container .mobile-area .menu-img {
+    display: none;
+  }
+}
+.main-container .mobile-area .nav-area {
+  display: flex;
+  padding: 20px;
+  gap: 34%;
+  justify-content: space-between;
+}
+@media (min-width: 48em) {
+  .main-container .mobile-area .nav-area {
+    display: none;
+  }
+}
+.main-container .mobile-area .nav-area #myLinks {
+  display: none;
+  position: absolute;
+}
+.main-container .mobile-area .nav-area #myLinks .nav-text {
+  display: none;
+  display: flex;
+  color: var(--Secondary-color);
+  background-color: var(--secondary-color);
+  margin-top: 20px;
+  font-family: var(--font-poppins);
+  font-size: 15px;
+  cursor: pointer;
+  padding-top: 20px;
+}
+@media (min-width: 48em) {
+  .main-container .mobile-area .nav-area #myLinks .nav-text {
+    display: block;
+  }
+}
+.main-container .mobile-area nav {
+  display: none;
+}
+@media (min-width: 48em) {
+  .main-container .mobile-area nav {
+    display: flex;
+    gap: 4%;
+    background-color: var(--nav-bg);
+    padding: 38px 0px;
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media (min-width: 64em) {
+  .main-container .mobile-area nav {
+    background: var(--glass-filter);
+    padding: 30px 0;
+    -webkit-backdrop-filter: blur(0.7px);
+            backdrop-filter: blur(0.7px);
+    position: relative;
+  }
+}
+@media (min-width: 90em) {
+  .main-container .mobile-area nav {
+    gap: 10%;
+  }
+}
+.main-container .mobile-area nav a {
+  color: var(--Secondary-color);
+  font-size: 12px;
+  font-family: var(--font-inter);
+  letter-spacing: 3px;
+}
+@media (min-width: 64em) {
+  .main-container .mobile-area nav a {
+    display: flex;
+    gap: 5%;
+  }
+}
+.main-container .mobile-area nav a:hover {
+  border-bottom: 3px solid var(--Secondary-color);
+}
+@media (min-width: 120em) {
+  .main-container .mobile-area nav a {
+    font-size: 20px;
+  }
+}
+.main-container .mobile-area nav a span {
+  display: none;
+}
+@media (min-width: 64em) {
+  .main-container .mobile-area nav a span {
+    display: block;
+    font-weight: bold;
+    color: white;
+  }
+}
+.main-container hr {
+  display: none;
+  opacity: 0.3;
+}
+@media (min-width: 64em) {
+  .main-container hr {
+    display: block;
+    width: 36%;
+    background-color: var(--glass-filter);
+    position: absolute;
+    top: 55px;
+    left: 12%;
+  }
+}
+.main-container .content-area {
+  padding: 20px;
+}
+@media (min-width: 48em) {
+  .main-container .content-area {
+    padding: 80px 80px;
+  }
+}
+@media (min-width: 64em) {
+  .main-container .content-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+    margin-top: 5%;
+    padding: 82px 0;
+  }
+}
+.main-container .content-area h1 {
+  color: var(--Primary-color);
+  font-size: 11px;
+  text-align: center;
+  font-family: var(--font-inter);
+  letter-spacing: 3px;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+@media (min-width: 64em) {
+  .main-container .content-area h1 {
+    font-size: 15px;
+  }
+}
+@media (min-width: 120em) {
+  .main-container .content-area h1 {
+    font-size: 22px;
+    letter-spacing: 8px;
+  }
+}
+.main-container .content-area h2 {
+  text-align: center;
+  color: var(--Secondary-color);
+  font-size: 80px;
+  -webkit-text-decoration: Bellefair;
+          text-decoration: Bellefair;
+  padding-bottom: 20px;
+  font-family: var(--font-inter);
+  font-weight: 300;
+}
+@media (min-width: 48em) {
+  .main-container .content-area h2 {
+    font-size: 100px;
+  }
+}
+@media (min-width: 120em) {
+  .main-container .content-area h2 {
+    font-size: 170px;
+    font-family: var(--font-inter);
+  }
+}
+.main-container .content-area p {
+  color: var(--Primary-color);
+  text-align: center;
+  font-family: var(--font-inter);
+  line-height: 1.8;
+  align-items: center;
+}
+@media (min-width: 48em) {
+  .main-container .content-area p {
+    width: 68vw;
+    padding-left: 80px;
+  }
+}
+@media (min-width: 64em) {
+  .main-container .content-area p {
+    width: 45vw;
+    text-align: justify;
+    padding-left: 80px;
+  }
+}
+@media (min-width: 90em) {
+  .main-container .content-area p {
+    width: 32vw;
+  }
+}
+@media (min-width: 120em) {
+  .main-container .content-area p {
+    width: 28vw;
+    font-size: 25px;
+  }
+}
+.main-container .content-area .image-area {
+  text-align: center;
+  padding-top: 50px;
+}
+@media (min-width: 48em) {
+  .main-container .content-area .image-area {
+    margin-top: 30%;
+  }
+}
+@media (min-width: 64em) {
+  .main-container .content-area .image-area {
+    margin-top: 0%;
+  }
+}
+.main-container .content-area .image-area .moon {
+  width: 50%;
+}
+@media (min-width: 48em) {
+  .main-container .content-area .image-area .moon {
+    width: 40%;
+  }
+}
+@media (min-width: 64em) {
+  .main-container .content-area .image-area .moon {
+    width: 70%;
+  }
+}
+@media (min-width: 120em) {
+  .main-container .content-area .image-area .moon {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
