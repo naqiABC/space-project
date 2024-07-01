@@ -10,16 +10,12 @@
     --Secondary-color: white;
     --font-inter: "Barlow Condensed",
         sans-serif;
-
     --glass-filter: rgba(255, 255, 255, 0.19);
 
 }
 
-
-
 .main-container {
-    background-image: url(/images/technology/background-technology-desktop.jpg);
-
+    background-image: url(../../images/technology/background-technology-desktop.jpg);
     background-size: cover;
 
 
@@ -72,13 +68,15 @@
                 }
 
                 span {
-                    display: none;
+                    // display: none;
+                    font-weight: bold;
+                    color: var(--Secondary-color);
 
-                    @include breakpoint(res1024) {
-                        display: block;
-                        font-weight: bold;
-                        color: var(--Secondary-color);
-                    }
+                    // @include breakpoint(res1024) {
+                    //     display: block;
+                    //     font-weight: bold;
+                    //     color: var(--Secondary-color);
+                    // }
                 }
 
 

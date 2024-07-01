@@ -13,7 +13,7 @@
 }
 
 .main-container {
-  background-image: url(/images/technology/background-technology-desktop.jpg);
+  background-image: url(../../images/technology/background-technology-desktop.jpg);
   background-size: cover;
 }
 .main-container .content-area {
@@ -49,14 +49,8 @@
   border-bottom: 3px solid var(--Secondary-color);
 }
 .main-container .content-area nav a span {
-  display: none;
-}
-@media (min-width: 64em) {
-  .main-container .content-area nav a span {
-    display: block;
-    font-weight: bold;
-    color: var(--Secondary-color);
-  }
+  font-weight: bold;
+  color: var(--Secondary-color);
 }
 .main-container hr {
   opacity: 0.3;
