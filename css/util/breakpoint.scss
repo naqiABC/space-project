@@ -1,0 +1,28 @@
+// 375px:23.438em,
+// 400px:25em,
+// 768px:48em,
+// 1024px:64em,
+// 1200px:75em,
+// 1366px:85.375em,
+// 1440px:90em
+// 1920px:120em
+$breakpoints-up: (
+    'res375': '23.438em',
+    // iphone all plus version are cover here 
+    'res425': '26.5625em',
+    'res768': '48em',
+    'res800': '50em',
+    'res1024': '64em',
+    'res1280': '80em',
+    'res1366': '85.375em',
+    'res1440': '90em',
+    'res1920': '120em',
+    'res2k': '128em',
+    'res4k': '240em',
+);
+
+@mixin breakpoint($size) {
+    @media (min-width: map-get($breakpoints-up, $size)) {
+        @content;
+    }
+}

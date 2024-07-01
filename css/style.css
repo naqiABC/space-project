@@ -22,6 +22,7 @@
 @media (min-width: 48em) {
   .main-container {
     background-image: url(../images/bg-images/background-home-tablet.jpg);
+    height: auto;
   }
 }
 @media (min-width: 64em) {

@@ -2,21 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-}
-
-:root {
-  --Primary-color: #D0D6F9;
-  --Secondary-color: white;
-  --font-inter: "Barlow Condensed",
-      sans-serif;
-  --h-grey: grey;
-  --glass-filter: rgba(255, 255, 255, 0.19);
 }
 
 .main-container {
-  background-image: url(/images/crew/background-crew-desktop.jpg);
+  background-image: url(../../images/crew/background-crew-desktop.jpg);
   background-size: cover;
 }
 .main-container .content-area {
